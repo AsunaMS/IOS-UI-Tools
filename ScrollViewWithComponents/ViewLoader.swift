@@ -10,7 +10,7 @@ import UIKit
 class ViewLoader {
     func insertComponentsTo(scrollView:UIScrollView,textColor:UIColor,descs:[String]) {
 	
-		// In case your scrollView doesnt have a height/width change the following to yout wishes:
+// In case your scrollView doesnt have a height/width change the following to yout wishes:
         var scrollViewInitialHeight:CGFloat = scrollView.frame.height
         var scrollViewInitialWidth:CGFloat = scrollView.frame.width
 		
