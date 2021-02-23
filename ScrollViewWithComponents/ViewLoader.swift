@@ -9,8 +9,11 @@ import UIKit
 
 class ViewLoader {
     func insertComponentsTo(scrollView:UIScrollView,textColor:UIColor,descs:[String]) {
-        var scrollViewInitialHeight:CGFloat = 550
-        var scrollViewInitialWidth:CGFloat = 350
+	
+		// In case your scrollView doesnt have a height/width change the following to yout wishes:
+        var scrollViewInitialHeight:CGFloat = scrollView.frame.height
+        var scrollViewInitialWidth:CGFloat = scrollView.frame.width
+		
         var scrollWidthSet:Bool = false
         var ingViews:[UIView] = []
         for (i,desc) in descs.enumerated() {
@@ -22,6 +25,7 @@ class ViewLoader {
                 }
             }
             let view = UIView()
+			// If you want a different image for every component, change it here
             let image = UIImageView(image: UIImage(systemName: "plus.circle"))
             let inglabel = UILabel()
             view.addSubview(image)
